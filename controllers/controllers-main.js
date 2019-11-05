@@ -7,10 +7,21 @@ const data = require('../models/entryData.js')
 
 //ROUTES
 
-//Landing
+//Seed the Database
+router.get('/entryData', (req,res) => {
+    Items.create(data, (err, newData) => {
+        if (err) {
+            res.send(err)
+        } else {
+            res.redirect('/HP_Encyclopedia/mainSearch')
+        }
+    });
+})
 
+//Landing
 router.get('/', (req,res) => {
-    res.send("Landing Page - Check!")
+    console.log("landing page - check!")
+    res.render('mainContent/landing.ejs');
 })
 
 // //Index
