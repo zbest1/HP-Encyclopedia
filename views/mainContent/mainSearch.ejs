@@ -1,5 +1,37 @@
 <% include ../partials/head.ejs %>
 <body>
-    
+    <style>
+        ul {
+            display: inline-block;
+            list-style-type: none;
+        }
+        li {
+            text-align: left;
+            font-size: 25px;
+            text-indent: -20px;
+        }
+    </style>
+
+    <h2 id="hptitle">
+        Harry Potter Encyclopedia
+    </h2>
+    <ul>
+        <%for(let i=0; i < allEntries.length; i++){ %>
+        <li>
+        <a href="/mainContent/mainSearch/<%=allEntries[i].id%>">
+            <%=allEntries[i].name%>
+        </a>
+        <br>
+        <a href="/mainContent/mainSearch/<%=allEntries[i].id%>"><img class="entryImg" src="<%=allEntries[i].img%>"></a>
+        </a>
+        </li>
+        <%}%>
+    </ul>
+    <br>
+    <br>
+    <nav>
+        <a href="/HP_Encyclopedia/mainContent/mainNew"><button>Add New</button></a>
+    </nav>
+    <hr>
 </body>
 </html>
