@@ -5,6 +5,17 @@ const mainSchema = new mongoose.Schema( {
         type: String,
         required: true },
     description: String,
+    species: String,
+    house: String,
+    dateOfBirth: String,
+    yearOfBirth: Number,
+    wand: {
+        wood: String,
+        core: String,
+        length: Number,
+    },
+    patronus: String,
+    actor: String,
     img: String,
     likes: Number,
 });

@@ -1,31 +1,38 @@
 <% include ../partials/head.ejs %>
 <body>
     <style>
-        label {
-            display: line-block;
-            width: 50px; 
+        .tableNew {
             text-align: left;
-            background-color: rgb(75,30,19,.5)
-        }
+        }    
     </style>
+    <h2 id="hptitle">
+        Harry Potter Encyclopedia
+    </h2>
+    <nav class="nav-top">
+        <a href="/HP_Encyclopedia"><button>Home</button></a>
+        <a href="/HP_Encyclopedia/mainContent/mainSearch"><button>Search & Index</button></a>
+    </nav>
     <div class="form-bkgnd">
+        
         <h2>Add Content</h2>
-        <hr>
-        <form action="/mainContent/mainSearch" method=POST>
-            <label for="name">Name: </label>
-            <input type="text" name="name" placeholder="Enter Name">
+        <div id="tableNew">
+            <form action="/HP_Encyclopedia/mainContent/mainSearch" method=POST>
+                <label for="name">Name: </label>
+                <input type="text" name="name" placeholder="Enter Name">(required)
+                <br>
+                <br>
+                <label for="description">Description: </label> 
+                <input type="textarea" name="description" placeholder="Description">
+                <br>
+                <br>
+                <label for="img">Image: </label>  
+                <input type="text" name="img" id="imgCreateNew" placeholder="Image"/>
+                <br>
+                <br>
+                <input type="submit" id="submit" value="Create New" />
+            </form>
             <br>
-            <br>
-            <label for="description">Description: </label> 
-            <input type="textarea" name="description" placeholder="Description">
-            <br>
-            <br>
-            <label for="img">Image: </label>  
-            <input type="text" name="img" id="imgCreateNew" placeholder="Image"/>
-            <br>
-            <br>
-            <input type="submit" id="submit" value="Create New" />
-        </form>
+        </div>
         <hr>
     </div>
 </body>

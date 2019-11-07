@@ -40,11 +40,19 @@ router.get('/mainContent/mainSearch', (req,res) => {
 
 //New
 router.get('/mainContent/mainNew', (req,res) => {
+    console.log('Add new content page - check!')
     res.render('mainContent/mainNew.ejs');
 })
 
-//Show
-
+//Show Detail
+router.get('/mainContent/mainDetail/:id', (req,res) => {
+    Items.findById(req.params.id, (err, entry) => {
+        console.log("This is the full entry", entry)
+        res.render('mainContent/mainDetail.ejs', {
+            thisEntry: entry
+        })
+    });
+});
 
 //Create 
 router.post('/mainContent/mainSearch', (req,res) => {
@@ -60,8 +68,37 @@ router.post('/mainContent/mainSearch', (req,res) => {
 
 
 //Delete
-
+router.delete('/mainContent/mainSearch/:id', (req,res) => {
+    Items.findByIdAndRemove(req.params.id, (err, deletedEntry) => {
+        if (err) {
+            console.log(err)
+        } else {
+            res.redirect('/HP_Encyclopedia/mainContent/mainSearch')
+        }
+    });
+});
 
 //Edit
+router.get('/mainContent/mainEdit/:id', (req,res) => {
+    Items.findById(req.params.id, (err, entry) => {
+        if (err) {
+            console.log(err)
+        } else {
+            res.render('mainContent/mainEdit.ejs', {
+                findEntry: entry
+            });
+        }
+    });
+});
+
+router.put('/mainContent/mainEdit/:id', (req,res) => {
+    Items.findByIdAndupdate(req.params.id, req.body, { new: true }, (err, updatedEntry) => {
+        if (err) {
+            console.log(err)
+        } else {
+            res.redirect('/HP_Encyclopedia/mainContent/mainSearch');
+        }
+    })
+});
 
 module.exports = router

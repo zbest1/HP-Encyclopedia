@@ -7,7 +7,7 @@ const methodOverride = require('method-override');
 const mainController = require('./controllers/controllers-main.js');
 
 //Setup DB
-mongoose.connect('mongodb://localhost:27017/basiccrud', {
+mongoose.connect('mongodb://localhost:27017/hpencyclopedia', {
   useNewUrlParser: true });
 mongoose.connection.once('open', () => {
     console.log('connected to mongo')
