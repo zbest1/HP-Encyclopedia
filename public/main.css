@@ -77,9 +77,11 @@ a:link {
     margin-right: auto;
     text-align: left;
 }
-/* #new-form label {
+#new-form label {
     width: 10px;
-} */
+    font-size: 12pt;
+}
+
 .detail-bkgnd {
     background-image: url("background.jpg");
     background-repeat: no-repeat;
