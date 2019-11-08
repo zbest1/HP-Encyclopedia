@@ -4,6 +4,7 @@ const mainSchema = new mongoose.Schema( {
     name: {
         type: String,
         required: true },
+    category: String,
     description: String,
     species: String,
     house: String,

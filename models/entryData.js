@@ -1,12 +1,60 @@
 module.exports = [
     {
+        name: "Ageing Potion",
+        category: "Potions",
+        img: "potions.jpg",
+        description: "A potion that, depending on the amount taken, ages the drinker.",
+        },
+        {
+        name: "Alihotsy Draught",
+        category: "Potions",
+        img: "potions.jpg",
+        description: "A potion from the Alihotsy plant; causes hysterical laughter."
+        },
+        {
+        name: "Amortentia",
+        category: "Potions",
+        img: "potions.jpg",
+        description: "A love potion that creates a powerful obsession."
+        },
+        {
+        name: "Draught of Living Death",
+        category: "Potions",
+        img: "potions.jpg",
+        description: "A potion that places the taker in a state of sleep that makes them seem like they are dead."
+        },
+    {
+        name: "Accio",
+        category: "Spells & Charms",
+        type: "charm",
+        description: "Summons an object.",
+        },
+      {
+        name: "Aguamenti",
+        category: "Spells & Charms",
+        type: "charm",
+        description: "Shoots water from wand.",
+        },
+        {
+        name: "Alohomora",
+        type: "charm",
+        description: "Opens locked objects.",
+        },
+        {
+        name: "Anapneo",
+        type: "spell",
+        description: "Clears the target's airway.",
+        },
+    {
         name: 'Dumbledore',
+        category: "Characters",
         description: 'Headmaster of Hogwarts',
         img: '/dumbledore.jpg',
         likes: 100,
     },
     {
         name: "Harry Potter",
+        category: "Characters",
         description: 'The main character in a book series by JK Rowling.',
         likes: 100,
         species: "human",
@@ -24,6 +72,7 @@ module.exports = [
     },
         {
         name: "Hermione Granger",
+        category: "Characters",
         species: "human",
         house: "Gryffindor",
         dateOfBirth: "19-09-1979",
@@ -39,6 +88,7 @@ module.exports = [
         },
     {
         name: "Ron Weasley",
+        category: "Characters",
         species: "human",
         house: "Gryffindor",
         dateOfBirth: "01-03-1980",
