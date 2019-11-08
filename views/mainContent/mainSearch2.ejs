@@ -1,14 +1,35 @@
 <% include ../partials/head.ejs %>
 <body>
+<style>
+    ul {
+        display: inline-block;
+        list-style-type: none;
+    }
+    li {
+        text-align: left;
+        font-size: 25px;
+        text-indent: -20px;
+    }
+</style>
     <h2 id="hptitle">
         Harry Potter Encyclopedia
     </h2>
-    <nav class="nav-top">
-        <a href="/HP_Encyclopedia"><button>Home</button></a>
-        <a href="/HP_Encyclopedia/mainContent/mainSearch"><button>Search & Index</button></a>
+    <nav>
+        <a href="/HP_Encyclopedia/mainContent/mainNew"><button>Add New</button></a>
     </nav>
     <br>
-    <div class="detail-bkgnd">
+    <div class="mozaicSearch">
+        <%for(let i=0; i < allEntries.length; i++){ %>
+        <div>
+        <a href="/HP_Encyclopedia/mainContent/mainDetail/<%=allEntries[i].id%>"><img class="entryImg shadowImg child" src="<%=allEntries[i].img%>"></a>
+        </div>
+        <%}%>
+    </div>
+    <br>
+    <br>
+    <hr>
+
+    <div class="form-bkgnd">
         <div class="entry-name">
             <h2><%=thisEntry.name%></h2>
         </div>

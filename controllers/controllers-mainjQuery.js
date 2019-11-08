@@ -26,18 +26,20 @@ router.get('/', (req,res) => {
 
 //Index / mainSearch page
 router.get('/mainContent/mainSearch', (req,res) => {
+    res.render('mainContent/mainSearch.ejs');
+});
+
+//New route to connect jQuery
+router.get('/mainContent/mozaic', (req,res) => {
     Items.find({}, (err, items) => {
         if (err) {
             res.send(err)
         } else {
-        console.log('Main search page - check!')
-        res.render('mainContent/mainSearch.ejs', {
-            allEntries: items
-        });
+            console.log('Main search page - check!')
+            res.send(items);
         }
     });
-});
-
+})
 //New
 router.get('/mainContent/mainNew', (req,res) => {
     console.log('Add new content page - check!')
