@@ -16,12 +16,18 @@
     </h2>
     <nav>
         <a href="/HP_Encyclopedia/mainContent/mainNew"><button>Add New</button></a>
+        
     </nav>
     <br>
-    <br>
     <div class="mozaicSearch">
+        <%for(let i=0; i < allEntries.length; i++){ %>
+        <div>
+        <a href="/HP_Encyclopedia/mainContent/mainDetail/<%=allEntries[i].id%>"><img class="entryImg shadowImg child" src="<%=allEntries[i].img%>"></a>
+        </div>
+        <%}%>
     </div>
-
-    
+    <br>
+    <br>
+    <hr>
 </body>
 </html>
