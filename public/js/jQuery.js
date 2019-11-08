@@ -22,9 +22,9 @@ $(() => {
         imgDiv.append(mozaicImg);
         mozaicContainer.append(imgDiv);
 
-        // mazaicImg.on('error', function() {
-        //   $().attr('src', '/wandMissingPic.jpg');
-        // });
+        if(item.img === "") {
+          item.img = '/wandMissingPic.jpg';
+        };
 
         imgDiv.on('click', (event) => {
           console.log('clicked')

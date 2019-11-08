@@ -1,16 +1,17 @@
 <% include ../partials/head.ejs %>
 <body>
     <style>
-         label {
+         /* label {
             display: line-block;
             width: 50px; 
             text-align: left;
-            background-color: rgb(75,30,19,.5)
-         }
+           
+         } */
     </style>
-    <h2 id="hptitle">
-            Harry Potter Encyclopedia
-        </h2>
+   <div id="bktitle">
+        <h1>Harry Potter Encyclopedia
+        </h1>
+    </div>
         <nav class="nav-top">
             <a href="/HP_Encyclopedia"><button>Home</button></a>
             <a href="/HP_Encyclopedia/mainContent/mainSearch"><button>Search & Index</button></a>
@@ -19,7 +20,7 @@
     <div class="form-bkgnd">
         <h2>Edit</h2>
         <hr>
-        <form action="/HP_Encyclopedia/mainContent/mainSearch" method=POST>
+        <form action="/HP_Encyclopedia/mainContent/mainEdit/<%= findEntry.id %>?_method=PUT" method=POST>
             <label for="name">Name: </label>
             <input type="text" name="name" value="<%=findEntry.name%>">
             <br>
@@ -33,6 +34,7 @@
             <br>
             <br>
             <input type="submit" id="submit" value="Update" />
+        
         </form>
         <hr>
     </div>
