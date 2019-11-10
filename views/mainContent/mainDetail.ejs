@@ -1,12 +1,6 @@
-<% include ../partials/head.ejs %>
+<% include ../partials/head.ejs %> 
 <body>
   
- <div id="main">
-            <h2>Sidenav Push Example</h2>
-            <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
-            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-    </div>
-
     <main>
         <br>
         <nav>
@@ -47,7 +41,7 @@
                     </tr>
                     <tr>
                         <th>Wand:</th>
-                        <td><%=thisEntry.wand%></td>
+                        <td>Wood:<%=thisEntry.wand.wood%>; Core:<%=thisEntry.wand.core%>; Length:<%=thisEntry.wand.length%> inches</td>
                     </tr>
                     <tr>
                         <th>Patronus</th>
