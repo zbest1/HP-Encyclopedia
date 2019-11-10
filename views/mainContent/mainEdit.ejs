@@ -1,46 +1,78 @@
 <% include ../partials/head.ejs %>
 <body>
     <main>
-        <div id="bktitle">
-            <h1>Harry Potter Encyclopedia</h1>
-        </div>
+        <br>
+        <nav>
+            <div id="bktitle">
+                <h1><a id="titleNav" href="/HP_Encyclopedia">Harry Potter Encyclopedia</a></h1>
+            </div>
+        </nav>
         <nav class="nav-top">
-            <a href="/HP_Encyclopedia"><button id="homeBtn">Home</button></a>
-            <a href="/HP_Encyclopedia/mainContent/mainSearch"><button id="searchBtn">Search & Index</button></a>
+            <a href="/HP_Encyclopedia"><button>Home</button></a>
+            <a href="/HP_Encyclopedia/mainContent/mainSearch"><button>Search & Index</button></a>
         </nav>
         <br>
         <div class="detail-bkgnd">
             <br>
             <h2>Edit</h2>
-            <form action="/HP_Encyclopedia/mainContent/mainEdit/<%= findEntry.id %>?_method=PUT" method=POST>
-                <label for="name">Name: </label>
-                <input type="text" name="name" value="<%=findEntry.name%>">
-                <br>
-                <br>
-                <label for="description">Category: </label> 
-                <input type="textarea" name="description" value="<%=findEntry.description%>">
-                <br>
-                <br>
-                <label for="description">Description: </label> 
-                <input type="textarea" name="description" value="<%=findEntry.description%>">
-                <br>
-                <br>
-                <label for="img">Image: </label>  
-                <input type="text" name="img" id="imgCreateNew" value="<%=findEntry.img%>">
-                <br>
-                <br>
-                
-                <nav class="nav-bottom">
-                    <ul>
-                        <li>
-                            <input type="submit" id="updateBtn" value="Update" />
-                        </li>
-                        <li>
-                            <a href="/HP_Encyclopedia/mainContent/mainSearch/"><button id="cancelBtn">Cancel</button></a>
-                        </li>
-                    </ul>
-                </nav>
-            </form>
+            <div class="entry-name">
+                <h2><%=findEntry.name%></h2>
+            </div>
+            <div class="detail-img">
+                <img class="detailImg" src="<%=findEntry.img%>">
+            </div>
+            <br>
+            <div class="edit-details">
+                <form id="edit-formDetails" action="/HP_Encyclopedia/mainContent/mainEdit/<%= findEntry.id %>?_method=PUT" method=POST>
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" value="<%=findEntry.name%>">
+                    <br>
+                    <br>
+                    <label for="description">Category: </label> 
+                    <input type="textarea" name="categoryn" value="<%=findEntry.category%>">
+                    <label for="img">Image: </label>  
+                    <input type="text" name="img" id="imgCreateNew" value="<%=findEntry.img%>">
+                    <br>                    <br>
+                    <label for="description">Description: </label> 
+                    <input type="textarea" name="description" value="<%=findEntry.description%>">
+                    <br>
+                    <br>
+                    <label for="description">Species: </label> 
+                    <input type="textarea" name="species" value="<%=findEntry.species%>">
+                    <br>
+                    <br>
+                    <label for="description">House: </label> 
+                    <input type="textarea" name="house" value="<%=findEntry.house%>">
+                    <br>
+                    <br>
+                    <label for="description">Date of Birth: </label> 
+                    <input type="textarea" name="dateOfBirth" value="<%=findEntry.dateOfBirth%>">
+                    <br>
+                    <br>
+                    <label for="description">Wand: </label> 
+                    <input type="textarea" name="wand" value="<%=findEntry.wand%>">
+                    <br>
+                    <br>
+                    <label for="description">Patronus: </label> 
+                    <input type="textarea" name="patronus" value="<%=findEntry.patronus%>">
+                    <br>
+                    <br>
+                    <label for="description">Actor: </label> 
+                    <input type="textarea" name="actor" value="<%=findEntry.actor%>">
+                    <br>
+                    <br>
+                    <nav class="nav-bottom">
+                        <ul>
+                            <li>
+                                <input type="submit" id="updateBtn" value="Update" />
+                            </li>
+                            <li>
+                                <a href="/HP_Encyclopedia/mainContent/mainSearch/"><button id="cancelBtn">Cancel</button></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </form>
+            </div>
         </div>
     </main>
 </body>

@@ -24,6 +24,13 @@ router.get('/', (req,res) => {
     res.render('mainContent/landing.ejs');
 })
 
+//Gallery
+//New
+router.get('/gallery', (req,res) => {
+    console.log('Display gallery page - check!')
+    res.render('mainContent/gallery.ejs');
+})
+
 //Index / mainSearch page
 router.get('/mainContent/mainSearch', (req,res) => {
     res.render('mainContent/mainSearch.ejs');
