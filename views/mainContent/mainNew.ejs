@@ -1,42 +1,93 @@
 <% include ../partials/head.ejs %>
 <body>
-    <style>
-        .tableNew {
-            text-align: left;
-        }    
-    </style>
-    <div id="bktitle">
-        <h1>
-            Harry Potter Encyclopedia
-        </h1>
-    </div>
-    <nav class="nav-top">
-        <a href="/HP_Encyclopedia"><button>Home</button></a>
-        <a href="/HP_Encyclopedia/mainContent/mainSearch"><button>Search & Index</button></a>
-    </nav>
-    <br>
-    <div class="form-bkgnd">
-        
-        <h2>Add Content</h2>
-        <div id="tableNew">
-            <form id="new-form" action="/HP_Encyclopedia/mainContent/mainSearch" method=POST>
-                <label for="name">Name: </label>
-                <input type="text" name="name" placeholder="Enter Name">(required)
-                <br>
-                <br>
-                <label for="description">Description: </label> 
-                <input type="textarea" name="description" placeholder="Description">
-                <br>
-                <br>
-                <label for="img">Image: </label>  
-                <input type="text" name="img" id="imgCreateNew" placeholder="Image"/>
-                <br>
-                <br>
-                <input type="submit" id="submit" value="Create New" />
-            </form>
-            <br>
+    <main>
+        <div id="bktitle">
+            <h1>Harry Potter Encyclopedia</h1>
         </div>
-        <hr>
-    </div>
+        <nav class="nav-top">
+            <a href="/HP_Encyclopedia"><button>Home</button></a>
+            <a href="/HP_Encyclopedia/mainContent/mainSearch"><button>Search & Index</button></a>
+        </nav>
+        <br>
+        <div class="detail-bkgnd">
+            <br>
+            <h2>Add Content</h2>
+            <div id="tableNew">
+                <form id="new-form" action="/HP_Encyclopedia/mainContent/mainSearch" method=POST>
+                    <div class="field">
+                        <!-- <label class="label is-small">Name</label> -->
+                            <div class="control">
+                            <input class="input is-small" type="text" name="name" placeholder="Enter Name (required)"> 
+                            </div> 
+                    </div>
+
+                    <div class="control">
+                            <!-- <label class="label is-small">Category</label> -->
+                        <div class="select">
+                            <select class="select is-small">
+                                <option name="category">Select Category</option>
+                                <option name="category">Character</option>
+                                <option name="category">Creatures</option>
+                                <option name="category">Potions</option>
+                                <option name="category">Spells & Charms</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field">
+                            <!-- <label class="label is-small">Image</label> -->
+                            <div class="control">
+                                    <input class="input is-small" type="text" name="img" placeholder="Image">
+                            </div>
+                    </div> 
+                    <div class="field">
+                        <!-- <label class="label is-small">Description</label> -->
+                        <div class="control">
+                            <textarea class="textarea is-small" name="description" placeholder="Description"></textarea>
+                        </div>
+                    </div> 
+                    <div class="field">
+                            <!-- <label class="label is-small">Species</label> -->
+                            <div class="control">
+                                <input class="input is-small" type="text" name="species" placeholder="Species">
+                            </div>
+                    </div> 
+                    <div class="field">
+                            <!-- <label class="label is-small">House</label> -->
+                            <div class="control">
+                                <input class="input is-small" type="text" name="house" placeholder="House">
+                            </div>
+                    </div> 
+                    <div class="field">
+                            <!-- <label class="label is-small">Date of Birth</label> -->
+                            <div class="control">
+                                <input class="input is-small" type="text" name="dateOfBirth" placeholder="Date of Birth">
+                            </div>
+                    </div> 
+                    <div class="field">
+                            <!-- <label class="label is-small">Wand</label> -->
+                            <div class="control">
+                                    <input class="input is-small" type="text" name="wand" placeholder="Wand">
+                            </div>
+                    </div> 
+                    <div class="field">
+                            <!-- <label class="label is-small">Patronus</label> -->
+                            <div class="control">
+                                <input class="input is-small" type="text" name="patronus" placeholder="Patronus">
+                            </div>
+                    </div> 
+                    <div class="field">
+                            <!-- <label class="label is-small">Actor</label> -->
+                            <div class="control">
+                                <input class="input is-small" type="text" name="actor" placeholder="Actor">
+                            </div>
+                    </div> 
+                    <input type="submit" id="submit" value="Create New" />
+                    <br>
+                    <br>
+                </form>
+            </div>
+        </div>
+        <br>
+    </main>
 </body>
 </html>

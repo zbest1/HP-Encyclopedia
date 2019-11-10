@@ -1,40 +1,30 @@
 <% include ../partials/head.ejs %>
-<body>
-<style>
-    ul {
-        display: inline-block;
-        list-style-type: none;
-    }
-    li {
-        text-align: left;
-        font-size: 25px;
-        text-indent: -20px;
-    }
-</style>
-<div id="bktitle">
-        <h1>
-            Harry Potter Encyclopedia
-        </h1>
-    </div>
-    <div id="imgHeader"> </div>
-    <div class="topnav">
+<body>   
+        <div class="navbar">
+            <a href="/HP_Encyclopedia">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>  
+    <main>           
+        <div id="bktitle">
+            <h1>Harry Potter Encyclopedia</h1>
+        </div>
+        <div class="topnav">
             <ul id="middle-nav">
-            <!-- <a href="http://localhost:3000/HP_Encyclopedia" class="active">Home</a> -->
-                <li><a id="allBtn">All Categories</a></li>
+                <li><a href="/HP_Encyclopedia/mainContent/mainSearch">All Categories</a></li>
                 <li><a id="charBtn">Characters</a></li>
                 <li><a id="potionsBtn">Potions</a></li>
                 <li><a id="spellsBtn">Spells & Charms</a></li>
             </ul>
         </div>
         <br>
-    <nav>
-        <a href="/HP_Encyclopedia/mainContent/mainNew"><button>Add New</button></a>
-    </nav>
-    <br>
-    <br>
-    <div class="mozaicSearch">
-    </div>
-
-    
+        <nav class="nav-top">
+            <a href="/HP_Encyclopedia/mainContent/mainNew"><button id="#newBtn">Add New</button></a>
+        </nav>
+        <br>
+        <br>
+        <div class="mozaicSearch"></div>
+    </main>
 </body>
 </html>

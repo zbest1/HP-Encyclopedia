@@ -1,63 +1,54 @@
 <% include ../partials/head.ejs %>
 <body>
-    <div id="bktitle">
-        <h1>
-            Harry Potter Encyclopedia
-        </h1>
-    </div>
-    <div id="imgHeader"> </div>
-    </h2>
-    <nav class="nav-top">
-        <a href="/HP_Encyclopedia"><button>Home</button></a>
-        <a href="/HP_Encyclopedia/mainContent/mainSearch"><button>Search & Index</button></a>
-        <a href="/HP_Encyclopedia/mainContent/mainEdit/<%=thisEntry._id%>"><button id="editBtn">Edit</button></a>
-        <br>
-        <br>
-        <form action="/HP_Encyclopedia/mainContent/mainSearch/<%=thisEntry._id%>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete"/>
-        </form>
-    </nav>
-    <br>
-    <div class="detail-bkgnd">
-        <br>
-        <div class="entry-name">
-            <h2><%=thisEntry.name%></h2>
+    <main>
+        <div id="bktitle">
+            <h1>Harry Potter Encyclopedia</h1>
         </div>
-        <div class="detail-img">
-            <img class="detailImg" src="<%=thisEntry.img%>">
-        </div>
-        <div class="entry-details">
-            <table class="details-center">
-                <tr>
-                    <td>Date of Birth:</td>
-                    <td><%=thisEntry.dateOfBirth%></td>
-                </tr>
-                <tr>
-                    <td>Description:</td>
-                    <td><%=thisEntry.description%></td>
-                </tr>
-                <tr>
-                    <td>Likes:</td>
-                    <td><%=thisEntry.likes%></td>
-                </tr>
-            </table>
+        <nav>
+            <a href="/HP_Encyclopedia"><button id="homeBtn">Home</button></a>
+            <a href="/HP_Encyclopedia/mainContent/mainSearch"><button id="searchBtn">Search & Index</button></a>
             <br>
+        </nav>
+        <br>
+        <div class="detail-bkgnd">
             <br>
-            <!-- <div class="nav-bottom">
+            <div class="entry-name">
+                <h2><%=thisEntry.name%></h2>
+            </div>
+            <div class="detail-img">
+                <img class="detailImg" src="<%=thisEntry.img%>">
+            </div>
+            <div class="entry-details">
+                <table class="details-center">
+                    <tr>
+                        <th>Date of Birth:</th>
+                        <td><%=thisEntry.dateOfBirth%></td>
+                    </tr>
+                    <tr>
+                        <th>Description:</th>
+                        <td><%=thisEntry.description%></td>
+                    </tr>
+                    <tr>
+                        <th>Likes:</th>
+                        <td><%=thisEntry.likes%></td>
+                    </tr>
+                </table>
+                <br>
+                <br>
+                <nav class="nav-bottom">
                     <ul>
                         <li>
                             <a href="/HP_Encyclopedia/mainContent/mainEdit/<%=thisEntry._id%>"><button id="editBtn">Edit</button></a>
                         </li>
                         <li>
-                            <form action="/HP_Encyclopedia/mainContent/mainSearch/<%=thisEntry._id%>?_method=DELETE" method="POST">
-                                <input type="submit" value="Delete"/>
+                            <form class="deleteBtn" action="/HP_Encyclopedia/mainContent/mainSearch/<%=thisEntry._id%>?_method=DELETE" method="POST">
+                                <input type="submit" id="deleteBtn" value="Delete"/>
                             </form>
                         </li>
                     </ul>
-                    <hr>
-                </div> -->
+                </nav>
+            </div>
         </div>
-       
-    </div>
+    </main>
 </body>
 </html>

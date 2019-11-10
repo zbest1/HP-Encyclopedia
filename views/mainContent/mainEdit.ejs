@@ -1,42 +1,47 @@
 <% include ../partials/head.ejs %>
 <body>
-    <style>
-         /* label {
-            display: line-block;
-            width: 50px; 
-            text-align: left;
-           
-         } */
-    </style>
-   <div id="bktitle">
-        <h1>Harry Potter Encyclopedia
-        </h1>
-    </div>
+    <main>
+        <div id="bktitle">
+            <h1>Harry Potter Encyclopedia</h1>
+        </div>
         <nav class="nav-top">
-            <a href="/HP_Encyclopedia"><button>Home</button></a>
-            <a href="/HP_Encyclopedia/mainContent/mainSearch"><button>Search & Index</button></a>
+            <a href="/HP_Encyclopedia"><button id="homeBtn">Home</button></a>
+            <a href="/HP_Encyclopedia/mainContent/mainSearch"><button id="searchBtn">Search & Index</button></a>
         </nav>
         <br>
-    <div class="form-bkgnd">
-        <h2>Edit</h2>
-        <hr>
-        <form action="/HP_Encyclopedia/mainContent/mainEdit/<%= findEntry.id %>?_method=PUT" method=POST>
-            <label for="name">Name: </label>
-            <input type="text" name="name" value="<%=findEntry.name%>">
+        <div class="detail-bkgnd">
             <br>
-            <br>
-            <label for="description">Description: </label> 
-            <input type="textarea" name="description" value="<%=findEntry.description%>">
-            <br>
-            <br>
-            <label for="img">Image: </label>  
-            <input type="text" name="img" id="imgCreateNew" value="<%=findEntry.img%>">
-            <br>
-            <br>
-            <input type="submit" id="submit" value="Update" />
-        
-        </form>
-        <hr>
-    </div>
+            <h2>Edit</h2>
+            <form action="/HP_Encyclopedia/mainContent/mainEdit/<%= findEntry.id %>?_method=PUT" method=POST>
+                <label for="name">Name: </label>
+                <input type="text" name="name" value="<%=findEntry.name%>">
+                <br>
+                <br>
+                <label for="description">Category: </label> 
+                <input type="textarea" name="description" value="<%=findEntry.description%>">
+                <br>
+                <br>
+                <label for="description">Description: </label> 
+                <input type="textarea" name="description" value="<%=findEntry.description%>">
+                <br>
+                <br>
+                <label for="img">Image: </label>  
+                <input type="text" name="img" id="imgCreateNew" value="<%=findEntry.img%>">
+                <br>
+                <br>
+                
+                <nav class="nav-bottom">
+                    <ul>
+                        <li>
+                            <input type="submit" id="updateBtn" value="Update" />
+                        </li>
+                        <li>
+                            <a href="/HP_Encyclopedia/mainContent/mainSearch/"><button id="cancelBtn">Cancel</button></a>
+                        </li>
+                    </ul>
+                </nav>
+            </form>
+        </div>
+    </main>
 </body>
 </html>

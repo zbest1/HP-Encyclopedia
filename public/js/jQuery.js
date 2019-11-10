@@ -18,7 +18,7 @@ $(() => {
         imgDiv.addClass('detail-img');
         const mozaicImg = $('<img>');
         mozaicImg.attr('src', item.img);
-        mozaicImg.addClass('entryImg')
+        mozaicImg.addClass('entryImg shadowImg')
         imgDiv.append(mozaicImg);
         mozaicContainer.append(imgDiv);
 
