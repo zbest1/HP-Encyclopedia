@@ -23,3 +23,4 @@ Unsolved Problems & Things I Would Like to Continue Working On:
 - Issues: Wand elements - the field shows sometimes when it shouldn't - which wasn't a problem before. I need to debug. 
 - Clean up the code. Remove unused code. I have code that I plan to use, but it is not doing anything at the moment. Remove it and save it somewhere else and keep the base code clean. 
 - Complete the categories. Add images.
+- Add login with validation. 
