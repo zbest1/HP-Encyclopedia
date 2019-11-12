@@ -24,3 +24,4 @@ Unsolved Problems & Things I Would Like to Continue Working On:
 - Clean up the code. Remove unused code. I have code that I plan to use, but it is not doing anything at the moment. Remove it and save it somewhere else and keep the base code clean. 
 - Complete the categories. Add images.
 - Add login with validation. 
+- On new page, have the user first select the category. Upon selecting the category, only show the relevant fields.
