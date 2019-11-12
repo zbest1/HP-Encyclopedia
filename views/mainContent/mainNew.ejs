@@ -1,96 +1,95 @@
 <% include ../partials/head.ejs %>
-<body>
-    <main>
-        <br>
-        <nav>
-            <div id="bktitle">
-                <h1><a id="titleNav" href="/HP_Encyclopedia">Harry Potter Encyclopedia</a></h1>
-            </div>
-        </nav>
-        <nav class="nav-top">
-            <a href="/HP_Encyclopedia"><button>Home</button></a>
-            <a href="/HP_Encyclopedia/mainContent/mainSearch"><button>Search & Index</button></a>
-        </nav>
-        <br>
-        <div class="detail-bkgnd">
+    <div id="main">
+        <main>
             <br>
-            <h2>Add Content</h2>
-            <div id="tableNew">
-                <form id="new-form" action="/HP_Encyclopedia/mainContent/mainSearch" method=POST>
-                    <div class="field">
-                        <!-- <label class="label is-small">Name</label> -->
-                            <div class="control">
-                            <input class="input is-small" type="text" name="name" placeholder="Enter Name (required)"> 
-                            </div> 
+            <div>
+                <div id="bktitle">
+                    <h1><a id="titleNav" href="/HP_Encyclopedia">Harry Potter Encyclopedia</a></h1>
+                </div>
+            </div>
+            <div class="midNav-container">
+                <ul id="midNav-child">
+                    <li><a href="/HP_Encyclopedia/mainContent/mainSearch">All Categories</a></li>
+                    <li><a id="charBtn">Characters</a></li>
+                    <li><a id="potionsBtn">Potions</a></li>
+                    <li><a id="spellsBtn">Spells & Charms</a></li>
+                </ul>
+            </div>
+                <div id="backNav-container">
+                    <div id="backNav-child">
+                        <a href="/HP_Encyclopedia/mainContent/mainSearch"><button id="backBtn">&laquo; Back</button></a>
                     </div>
+                </div>
+            <div class="detail-bkgnd">
+                <br>
+                <h2>Add Content</h2>
+                <div id="tableNew">
+                    <form id="new-form" action="/HP_Encyclopedia/mainContent/mainSearch" method=POST>
+                        <div class="field">
+                                <div class="control">
+                                <input class="input is-small" type="text" name="name" placeholder="Enter Name (required)"> 
+                                </div> 
+                        </div>
 
-                    <div class="control">
-                            <!-- <label class="label is-small">Category</label> -->
-                        <div class="select">
-                            <select class="select is-small">
-                                <option name="category">Select Category</option>
-                                <option name="category">Character</option>
-                                <option name="category">Creatures</option>
-                                <option name="category">Potions</option>
-                                <option name="category">Spells & Charms</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="field">
-                            <!-- <label class="label is-small">Image</label> -->
-                            <div class="control">
-                                    <input class="input is-small" type="text" name="img" placeholder="Image">
-                            </div>
-                    </div> 
-                    <div class="field">
-                        <!-- <label class="label is-small">Description</label> -->
                         <div class="control">
-                            <textarea class="textarea is-small" name="description" placeholder="Description"></textarea>
+                            <div class="select">
+                                <select class="select is-small">
+                                    <option name="category">Select Category</option>
+                                    <option name="category">Character</option>
+                                    <option name="category">Creatures</option>
+                                    <option name="category">Potions</option>
+                                    <option name="category">Spells & Charms</option>
+                                </select>
+                            </div>
                         </div>
-                    </div> 
-                    <div class="field">
-                            <!-- <label class="label is-small">Species</label> -->
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-small" type="text" name="img" placeholder="Image">
+                            </div>
+                        </div> 
+                        <div class="field">
+                            <div class="control">
+                                <textarea class="textarea is-small" name="description" placeholder="Description"></textarea>
+                            </div>
+                        </div> 
+                        <div class="field">
                             <div class="control">
                                 <input class="input is-small" type="text" name="species" placeholder="Species">
                             </div>
-                    </div> 
-                    <div class="field">
-                            <!-- <label class="label is-small">House</label> -->
+                        </div> 
+                        <div class="field">
                             <div class="control">
                                 <input class="input is-small" type="text" name="house" placeholder="House">
                             </div>
-                    </div> 
-                    <div class="field">
-                            <!-- <label class="label is-small">Date of Birth</label> -->
+                        </div> 
+                        <div class="field">
                             <div class="control">
                                 <input class="input is-small" type="text" name="dateOfBirth" placeholder="Date of Birth">
                             </div>
-                    </div> 
-                    <div class="field">
-                            <!-- <label class="label is-small">Wand</label> -->
+                        </div> 
+                        <div class="field">
                             <div class="control">
                                     <input class="input is-small" type="text" name="wand" placeholder="Wand">
                             </div>
-                    </div> 
-                    <div class="field">
-                            <!-- <label class="label is-small">Patronus</label> -->
+                        </div> 
+                        <div class="field">
                             <div class="control">
                                 <input class="input is-small" type="text" name="patronus" placeholder="Patronus">
                             </div>
-                    </div> 
-                    <div class="field">
-                            <!-- <label class="label is-small">Actor</label> -->
+                        </div> 
+                        <div class="field">
                             <div class="control">
                                 <input class="input is-small" type="text" name="actor" placeholder="Actor">
                             </div>
-                    </div> 
-                    <input type="submit" id="submit" value="Create New" />
-                    <br>
-                    <br>
-                </form>
+                        </div> 
+                        <input type="submit" id="submit" value="Create New" />
+                        <br>
+                        <br>
+                    </form>
+                </div>
             </div>
-        </div>
-        <br>
-    </main>
+            <br>
+        </main>
+    </div>
 </body>
 </html>

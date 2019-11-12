@@ -1,20 +1,31 @@
 <% include ../partials/head.ejs %> 
-<body>
-  
+<div id="main">
     <main>
         <br>
-        <nav>
+        <div>
             <div id="bktitle">
                 <h1><a id="titleNav" href="/HP_Encyclopedia">Harry Potter Encyclopedia</a></h1>
             </div>
-        </nav>
-        <nav>
-            <a href="/HP_Encyclopedia"><button>Home</button></a>
-            <a href="/HP_Encyclopedia/mainContent/mainSearch"><button>Search & Index</button></a>
-        </nav>
-        <br>
+        </div>
+        <div class="midNav-container">
+            <ul id="midNav-child">
+                <li><a href="/HP_Encyclopedia/mainContent/mainSearch">All Categories</a></li>
+                <li><a id="charBtn">Characters</a></li>
+                <li><a id="potionsBtn">Potions</a></li>
+                <li><a id="spellsBtn">Spells & Charms</a></li>
+            </ul>
+        </div>
+
+        <div id="backNav-container">
+            <div id="backNav-child">
+                <a href="/HP_Encyclopedia/mainContent/mainSearch"><button id="backBtn">&laquo; Back</button></a>
+            </div>
+        </div>
         <div class="detail-bkgnd">
             <br>
+            <div class="detail-category">
+                <h2>~<%=thisEntry.category%>~</h2>
+            </div>
             <div class="entry-name">
                 <h2><%=thisEntry.name%></h2>
             </div>
@@ -41,7 +52,7 @@
                     </tr>
                     <tr>
                         <th>Wand:</th>
-                        <td>Wood:<%=thisEntry.wand.wood%>; Core:<%=thisEntry.wand.core%>; Length:<%=thisEntry.wand.length%> inches</td>
+                        <td><%=thisEntry.wand%></td>
                     </tr>
                     <tr>
                         <th>Patronus</th>
@@ -54,19 +65,17 @@
                     <br>
                     <tr>
                         <th></th>
-                        <td id="bottomBtns">
-                            <nav class="nav-bottom">
-                                <ul id="nav-bottomList">
-                                    <li>
-                                        <a href="/HP_Encyclopedia/mainContent/mainEdit/<%=thisEntry._id%>"><button id="editBtn">Edit</button></a>
-                                    </li>
-                                    <li>
-                                        <form class="deleteBtn" action="/HP_Encyclopedia/mainContent/mainSearch/<%=thisEntry._id%>?_method=DELETE" method="POST">
+                        <td>
+                            <div class="nav-bottom">
+                                <div id="nav-bottomEdit">
+                                    <a href="/HP_Encyclopedia/mainContent/mainEdit/<%=thisEntry._id%>"><button id="editBtn">Edit</button></a>
+                                </div>
+                                <div id="nav-bottomDelete">
+                                    <form class="deleteBtn" action="/HP_Encyclopedia/mainContent/mainSearch/<%=thisEntry._id%>?_method=DELETE" method="POST">
                                             <input type="submit" id="deleteBtn" value="Delete"/>
-                                        </form>
-                                    </li>
-                                </ul>
-                            </nav>
+                                    </form>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                     <br>
@@ -76,5 +85,6 @@
             </div>
         </div>
     </main>
+</div>
 </body>
 </html>

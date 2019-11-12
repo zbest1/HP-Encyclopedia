@@ -1,17 +1,25 @@
 <% include ../partials/head.ejs %>
-<body>
+<div id="main">
     <main>
         <br>
-        <nav>
+        <div>
             <div id="bktitle">
                 <h1><a id="titleNav" href="/HP_Encyclopedia">Harry Potter Encyclopedia</a></h1>
             </div>
-        </nav>
-        <nav class="nav-top">
-            <a href="/HP_Encyclopedia"><button>Home</button></a>
-            <a href="/HP_Encyclopedia/mainContent/mainSearch"><button>Search & Index</button></a>
-        </nav>
-        <br>
+        </div>
+        <div class="midNav-container">
+            <ul id="midNav-child">
+                <li><a href="/HP_Encyclopedia/mainContent/mainSearch">All Categories</a></li>
+                <li><a id="charBtn">Characters</a></li>
+                <li><a id="potionsBtn">Potions</a></li>
+                <li><a id="spellsBtn">Spells & Charms</a></li>
+            </ul>
+        </div>
+            <div id="backNav-container">
+                <div id="backNav-child">
+                    <a href="/HP_Encyclopedia/mainContent/mainSearch"><button id="backBtn">&laquo; Back</button></a>
+                </div>
+            </div>
         <div class="detail-bkgnd">
             <br>
             <h2>Edit</h2>
@@ -22,58 +30,54 @@
                 <img class="detailImg" src="<%=findEntry.img%>">
             </div>
             <br>
-            <div class="edit-details">
-                <form id="edit-formDetails" action="/HP_Encyclopedia/mainContent/mainEdit/<%= findEntry.id %>?_method=PUT" method=POST>
-                    <label for="name">Name: </label>
-                    <input type="text" name="name" value="<%=findEntry.name%>">
-                    <br>
-                    <br>
-                    <label for="description">Category: </label> 
-                    <input type="textarea" name="categoryn" value="<%=findEntry.category%>">
+            <div id="tableNew">
+                <form id="edit-form" action="/HP_Encyclopedia/mainContent/mainEdit/<%= findEntry.id %>?_method=PUT" method=POST>
+                    <div class="field">
+                        <div class="control">
+                            <label for="name">Name: </label>
+                            <input class="input is-small" type="text" name="name" value="<%=findEntry.name%>">
+                        </div> 
+                    </div>
+                    <label for="category">Category: </label> 
+                    <input type="text" name="category" value="<%=findEntry.category%>">
                     <label for="img">Image: </label>  
                     <input type="text" name="img" id="imgCreateNew" value="<%=findEntry.img%>">
-                    <br>                    <br>
                     <label for="description">Description: </label> 
                     <input type="textarea" name="description" value="<%=findEntry.description%>">
                     <br>
+                    <label for="species">Species: </label> 
+                    <input type="text" name="species" value="<%=findEntry.species%>">
                     <br>
-                    <label for="description">Species: </label> 
-                    <input type="textarea" name="species" value="<%=findEntry.species%>">
+                    <label for="house">House: </label> 
+                    <input type="text" name="house" value="<%=findEntry.house%>">
                     <br>
+                    <label for="dateofBirth">Date of Birth: </label> 
+                    <input type="text" name="dateOfBirth" value="<%=findEntry.dateOfBirth%>">
                     <br>
-                    <label for="description">House: </label> 
-                    <input type="textarea" name="house" value="<%=findEntry.house%>">
-                    <br>
-                    <br>
-                    <label for="description">Date of Birth: </label> 
-                    <input type="textarea" name="dateOfBirth" value="<%=findEntry.dateOfBirth%>">
-                    <br>
-                    <br>
-                    <label for="description">Wand: </label> 
-                    <input type="textarea" name="wand" value="<%=findEntry.wand%>">
-                    <br>
-                    <br>
+                    <label for="wand">Wand: </label> 
+                    <input type="text" name="wand" value="<%=findEntry.wand.wood%><%=findEntry.wand.core%>">
                     <label for="description">Patronus: </label> 
                     <input type="textarea" name="patronus" value="<%=findEntry.patronus%>">
-                    <br>
                     <br>
                     <label for="description">Actor: </label> 
                     <input type="textarea" name="actor" value="<%=findEntry.actor%>">
                     <br>
                     <br>
-                    <nav class="nav-bottom">
-                        <ul>
-                            <li>
-                                <input type="submit" id="updateBtn" value="Update" />
-                            </li>
-                            <li>
-                                <a href="/HP_Encyclopedia/mainContent/mainSearch/"><button id="cancelBtn">Cancel</button></a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <br>
+                    <div class="nav-bottom">
+                        <div id="nav-bottomEdit">
+                            <input type="submit" id="updateBtn" value="Update" />
+                        </div>
+                        <div>
+                            <a href="/HP_Encyclopedia/mainContent/mainSearch/"><button id="cancelBtn">Cancel</button></a>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
                 </form>
             </div>
         </div>
     </main>
+</div>
 </body>
 </html>
