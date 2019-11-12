@@ -128,7 +128,7 @@ input {
     flex-direction: column;
     align-content: center;
     margin-bottom: 5%;
-    margin-top: 6%;
+    margin-top: 5%;
 }
 .edit-details {
     display: flex;
@@ -249,6 +249,8 @@ button {
     border-color: rgb(42, 25, 125);
 }
 #updateBtn {
+    margin-top: 4px;
+    margin-left: 25px;
     background-color: rgb(42, 25, 125, .5);
     border-color: rgb(52, 79, 58);
     color: white;
@@ -279,14 +281,6 @@ button {
     border-color: rgb(62, 61, 61);
 }
 
-#updateBtn {
-    color: white;
-    border-radius: 4px;
-    background-color: blue;
-}
-#updateBtn:hover {
-    border-color: rgb(62, 61, 61);
-}
 input[type=submit] {
     background-color: lightgray;
     color: black;
@@ -378,7 +372,7 @@ color: rgb(75,30,19)
 #backNav-container {
     display: flex;
     justify-content: center;
-    margin-left: -34%;
+    margin-left: -45%;
     margin-bottom:-3%;
 }
 #backBtn {
@@ -387,13 +381,20 @@ color: rgb(75,30,19)
     border-color: white;
     font-size: 10pt;
     font-family: 'Open Sans', sans-serif;
+    margin-bottom: -10px;
 }
 #backBtn:hover {
     background-color:rgb(42, 25, 125);
     border-color: rgb(42, 25, 125);
     color: white;
 }
-/* Side Nagigation pop-out*/
+
+
+
+
+
+
+/* Side Nagigation pop-out - needs further development*/
 #top-sideNav {
     display: flex;
     z-index:4;
@@ -421,22 +422,22 @@ color: rgb(75,30,19)
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+    color: #f1f1f1;
 }
 
 .sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 } 
 #hamburgerBtn {
     z-index: 4;
 }
 #main {
-  transition: margin-left .5s;
-  padding: 16px;
+    transition: margin-left .5s;
+    padding: 16px;
 }
 
 @media screen and (max-height: 450px) {
@@ -444,8 +445,7 @@ color: rgb(75,30,19)
   .sidenav a {font-size: 18px;}
 }
 
-
-  .button {
+.button {
     cursor: pointer;
     display: inline-block;
     width: auto;
@@ -455,42 +455,42 @@ color: rgb(75,30,19)
     -ms-transition: all .7s ease;
     -o-transition: all .7s ease;
     transition: all .7s ease;
-  }
+}
   
-  .nav-right {
+.nav-right {
     position: fixed;
     right: 40px;
     top: 20px;
-  }
+}
   
-  .nav-right.visible-xs {
+.nav-right.visible-xs {
     z-index: 3;
-  }
+}
   
-  .hidden-xs {
+.hidden-xs {
     display: none;
-  }
+}
   
-  .middle {
+.middle {
     margin: 0 auto;
-  }
+}
   
-  .bar {
+.bar {
     -webkit-transition: all .7s ease;
     -moz-transition: all .7s ease;
     -ms-transition: all .7s ease;
     -o-transition: all .7s ease;
     transition: all .7s ease;
-  }
+}
   
-   .bar {
+.bar {
     background-color: #FFF;
     -webkit-transition: all .7s ease;
     -moz-transition: all .7s ease;
     -ms-transition: all .7s ease;
     -o-transition: all .7s ease;
     transition: all .7s ease;
-  }
+}
   
   .button.active .top {
     -webkit-transform: translateY(15px) rotateZ(45deg);
