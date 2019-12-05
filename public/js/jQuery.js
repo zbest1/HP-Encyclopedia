@@ -1,7 +1,7 @@
 let apiData = [];
 $(() => {
 const unpackData = (filter) => {
- $.ajax({url: 'http://localhost:3000/HP_Encyclopedia/mainContent/mozaic'}).then((data) => {
+ $.ajax({url: 'https://hpencyclopedia.herokuapp.com/HP_Encyclopedia/mainContent/mozaic'}).then((data) => {
    console.log('Received', data);
    apiData = data;
    const mozaicContainer = $('.mozaicSearch');
@@ -25,7 +25,7 @@ const unpackData = (filter) => {
        mozaicContainer.append(imgDiv);
        imgDiv.on('click', (event) => {
          console.log('clicked')
-         window.location.href=`http://localhost:3000/HP_Encyclopedia/mainContent/mainDetail/${item._id}`;
+         window.location.href=`https://hpencyclopedia.herokuapp.com/HP_Encyclopedia/mainContent/mainDetail/${item._id}`;
        });
      }
    });
