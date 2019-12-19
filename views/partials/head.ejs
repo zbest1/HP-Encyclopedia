@@ -17,7 +17,57 @@ bulma.min.css" rel="stylesheet"/>
     <script defer src="/js/jQuery.js"></script>
 </head>
 <body>
-<div id="top-sideNav" class="sidenav">
+
+<nav class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/HP_Encyclopedia/mainContent/mainSearch">
+        <img src="/logo.png" width="70" height="90">
+      </a>
+  
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <!-- <a class="navbar-item">
+          Home
+        </a>
+        <a class="navbar-item">
+          Documentation
+        </a> -->
+  
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item field">
+            <p class="control has-icons-right">
+              <input class="input is-small" type="search" placeholder="Search...">
+              <!-- <span class="icon is-small is-right">
+                  <i class="fas fa-check"></i>
+              </span> -->
+            </p>
+        </div>
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-small">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-link is-light is-small">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</nav>
+      
+<!-- <div id="top-sideNav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#">About</a>
   <a href="#">Categories</a>
@@ -29,7 +79,8 @@ bulma.min.css" rel="stylesheet"/>
   <div class="bar top"></div>
   <div class="bar middle"></div>
   <div class="bar bottom"></div>
-</div>
+</div> -->
+
 
 <!-- <div class="searchNav">
     <div class="search-container">
@@ -51,3 +102,12 @@ bulma.min.css" rel="stylesheet"/>
     } 
 </script> -->
 
+<section class="hero">
+    <div class="hero-body" id="bktitle">
+        <div class="container">
+        <h1>
+            <a id="titleNav" href="/HP_Encyclopedia">Harry Potter Encyclopedia</a>
+        </h1>
+        </div>        
+    </div>
+</section> 

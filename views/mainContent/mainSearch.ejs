@@ -1,12 +1,18 @@
 <% include ../partials/head.ejs %>
     <div id="main">
         <main>   
-            <br>   
-            <div>
-                <div id="bktitle">
-                    <h1><a id="titleNav" href="/HP_Encyclopedia">Harry Potter Encyclopedia</a></h1>
+            <br>  
+
+            <!-- <section class="hero">
+                <div class="hero-body" id="bktitle">
+                    <div class="container">
+                    <h1>
+                        <a id="titleNav" href="/HP_Encyclopedia">Harry Potter Encyclopedia</a>
+                    </h1>
+                    </div>        
                 </div>
-            </div>
+            </section>  -->
+
             <div class="midNav-container">
                 <ul id="midNav-child">
                     <li><a href="/HP_Encyclopedia/mainContent/mainSearch">All Categories</a></li>
@@ -15,13 +21,13 @@
                     <li><a id="spellsBtn">Spells & Charms</a></li>
                 </ul>
             </div>
+            <div class="mozaicSearch"></div>
             <div id="newBtn-container">
                 <div id="newBtn-child">
                 <a href="/HP_Encyclopedia/mainContent/mainNew"><button id="newBtn">Add New</button></a>
                 </div>
             </div>
-            <div class="mozaicSearch"></div>
         </main>
     </div>
 </body>
-</html>
+<% include ../partials/foot.ejs %>

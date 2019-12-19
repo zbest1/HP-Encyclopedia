@@ -23,8 +23,22 @@ const unpackData = (filter) => {
        mozaicImg.addClass('entryImg shadowImg')
        imgDiv.append(mozaicImg);
        mozaicContainer.append(imgDiv);
-       imgDiv.on('click', (event) => {
-         console.log('clicked')
+
+       imgDiv.on('click', 
+      //  (function() {
+      //   var targetModal = $(this).next('div');
+      //   $(targetModal).addClass("is-active");
+      //   });
+      //   $(".modal-background").click(function() {
+      //     $(".modal").removeClass("is-active");
+      //   });
+      //   $(".modal-close").click(function() {
+      //     $(".modal").removeClass("is-active");
+        
+      
+         (event) => {
+        //  console.log('clicked')
+        //  window.location.href=`http://localhost:3000/HP_Encyclopedia/mainContent/mainDetail/${item._id}`;
          window.location.href=`https://hpencyclopedia.herokuapp.com/HP_Encyclopedia/mainContent/mainDetail/${item._id}`;
        });
      }
