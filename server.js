@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const app = express();
 const methodOverride = require('method-override');
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/hpencyclopedia'
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://heroku_s03zvp4t:learning4me2@cluster-s03zvp4t.p5ssz.mongodb.net/heroku_s03zvp4t?retryWrites=true&w=majority'
 
 //Controller
 const mainController = require('./controllers/controllers-main.js');
